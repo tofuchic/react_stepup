@@ -6,6 +6,8 @@ export const Page2 = (props) => {
     <div>
       <h1>Page2です</h1>
       <Link to={`page2/${count}`}>UrlParameter</Link>
+      <br />
+      <Link to={`page2/${count}?name=hoge`}>QueryParameter</Link>
     </div>
   );
 };
