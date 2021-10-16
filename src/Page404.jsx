@@ -6,8 +6,6 @@ export const Page404 = () => {
   const onClickBack = () => {
     history.goBack();
   };
-  console.log(history.location.key);
-  console.log(history.location.key === undefined);
 
   return (
     <div>
