@@ -8,6 +8,9 @@ import { StyledJsx } from "./components/StyledJsx";
 import { StyledComponents } from "./components/StyledComponents";
 import { Emotion } from "./components/Emotion";
 
+import { BrowserRouter, Link } from "react-router-dom";
+import { Router } from "./router/Router";
+
 export default function App() {
   console.log("rendering");
 
@@ -20,25 +23,34 @@ export default function App() {
   const onClickViewText = useCallback(() => setViewText(!viewText), [viewText]);
 
   return (
-    <div className="App">
-      <h1>React/TypeScript勉強用</h1>
-      <a href="https://www.udemy.com/course/react_stepup">参考元</a>
-      <p>count={count}</p>
-      <button onClick={onClickCountUp}>+1</button>
-      <br />
-      <br />
-      <input onChange={onChangeText} />
-      <br />
-      <br />
-      <ViewButton viewText={viewText} onClickViewText={onClickViewText} />
-      <ChildArea viewText={viewText} text={text}></ChildArea>
-      <br />
-      <br />
-      <InlineStyle />
-      <CssModules />
-      <StyledJsx />
-      <StyledComponents />
-      <Emotion />
-    </div>
+    <BrowserRouter>
+      <Router />
+      <div className="App">
+        <h1>React/TypeScript勉強用</h1>
+        <a href="https://www.udemy.com/course/react_stepup">参考元</a>
+        <br />
+        <Link to="/">Home</Link>
+        <br />
+        <Link to="/page1">Page1</Link>
+        <br />
+        <Link to="/page2">Page2</Link>
+        <p>count={count}</p>
+        <button onClick={onClickCountUp}>+1</button>
+        <br />
+        <br />
+        <input onChange={onChangeText} />
+        <br />
+        <br />
+        <ViewButton viewText={viewText} onClickViewText={onClickViewText} />
+        <ChildArea viewText={viewText} text={text}></ChildArea>
+        <br />
+        <br />
+        <InlineStyle />
+        <CssModules />
+        <StyledJsx />
+        <StyledComponents />
+        <Emotion />
+      </div>
+    </BrowserRouter>
   );
 }
