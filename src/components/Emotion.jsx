@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import styled from "@emotion/styled";
 
 export const Emotion = () => {
   const divStyle = css`
@@ -16,23 +17,24 @@ export const Emotion = () => {
     margin: 8px;
     color: green;
   `;
-  const buttonStyle = css`
-    margin: 8px;
-    background-color: lightgreen;
-    border: none;
-    padding: 8px;
-    border-radius: 8px;
-    &:hover {
-      background-color: lightblue;
-      color: gray;
-      cursor: pointer;
-    }
-  `;
 
   return (
     <div css={divStyle}>
       <p css={titleStyle}>- Emotion -</p>
-      <button css={buttonStyle}>FIGHT!!!</button>
+      <SButton>FIGHT!!!</SButton>
     </div>
   );
 };
+
+const SButton = styled.button`
+  margin: 8px;
+  background-color: lightgreen;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  &:hover {
+    background-color: lightblue;
+    color: gray;
+    cursor: pointer;
+  }
+`;
