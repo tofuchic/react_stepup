@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { Card } from "../../atoms/card/Card";
 
 export const UserCard = (props) => {
   const { user } = props;
   console.log(user);
   return (
-    <div>
+    <Card>
       {user !== undefined ? (
         <>
           <img height={160} width={160} src={user.image} alt="profile" />
@@ -37,7 +38,7 @@ export const UserCard = (props) => {
           </SDl>
         </>
       )}
-    </div>
+    </Card>
   );
 };
 
