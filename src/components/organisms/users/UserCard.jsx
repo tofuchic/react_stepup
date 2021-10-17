@@ -1,23 +1,42 @@
 import styled from "styled-components";
 
-export const UserCard = () => {
+export const UserCard = (props) => {
+  const { user } = props;
+  console.log(user);
   return (
     <div>
-      <img
-        height={160}
-        width={160}
-        src="https://source.unsplash.com/aG2K-plT4eY"
-        alt="profile"
-      />
-      <p>name</p>
-      <SDl>
-        <dt>mail</dt>
-        <dd>example@mail.com</dd>
-        <dt>tel</dt>
-        <dd>080-1234-5678</dd>
-        <dt>company</dt>
-        <dd>example corp.</dd>
-      </SDl>
+      {user !== undefined ? (
+        <>
+          <img height={160} width={160} src={user.image} alt="profile" />
+          <p>{user.name}</p>
+          <SDl>
+            <dt>mail</dt>
+            <dd>{user.email}</dd>
+            <dt>tel</dt>
+            <dd>{user.phone}</dd>
+            <dt>company</dt>
+            <dd>{user.company.name}</dd>
+          </SDl>
+        </>
+      ) : (
+        <>
+          <img
+            height={160}
+            width={160}
+            src="https://source.unsplash.com/-KLKu_pruJ4"
+            alt="profile"
+          />
+          <p>name</p>
+          <SDl>
+            <dt>mail</dt>
+            <dd>example@mail.com</dd>
+            <dt>tel</dt>
+            <dd>080-1234-5678</dd>
+            <dt>company</dt>
+            <dd>example corp.</dd>
+          </SDl>
+        </>
+      )}
     </div>
   );
 };

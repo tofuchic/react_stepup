@@ -6,6 +6,16 @@ import { ShortInput } from "../components/atoms/input/ShortInput";
 import { SearchInput } from "../components/molecules/SearchInput";
 import { UserCard } from "../components/organisms/users/UserCard";
 
+const user = {
+  name: "とうふめんたるちきんはーと",
+  image: "https://source.unsplash.com/aG2K-plT4eY",
+  email: "tofuchic@example.com",
+  phone: "080-1234-5678",
+  company: {
+    name: "にがり"
+  }
+};
+
 export const AtomicDesign = () => {
   return (
     <>
@@ -23,7 +33,7 @@ export const AtomicDesign = () => {
       {/* レスポンシブデザインにしたいところ */}
       <SecondaryDiv>
         <PrimaryDiv>
-          <UserCard />
+          <UserCard user={user} />
           <UserCard />
         </PrimaryDiv>
         <PrimaryDiv>
