@@ -18,6 +18,8 @@ export default function App() {
         <br />
         <Link to="/page2">Page2</Link>
         <br />
+        <Link to="/atomicDesign">AtomicDesign</Link>
+        <br />
         <Link to="/aaaaaaaaaaaaa">404</Link>
       </div>
       <Router />

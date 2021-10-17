@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import { AtomicDesign } from "../atomicDesign/AtomicDesign";
 import { Home } from "../Home";
 import { Page404 } from "../Page404";
 import { page1Routes } from "./Page1Routes";
@@ -43,6 +44,9 @@ export const Router = (props) => {
           </Switch>
         )}
       />
+      <Route path="/atomicDesign">
+        <AtomicDesign />
+      </Route>
       <Route path="*">
         <Page404 />
       </Route>
