@@ -1,19 +1,21 @@
 import { PrimaryButton } from "../components/atoms/button/PrimaryButton";
 import { SecondaryButton } from "../components/atoms/button/SecondaryButton";
 import { PrimaryDiv } from "../components/atoms/div/PrimaryDiv";
-import { PrimaryInput } from "../components/atoms/input/PrimaryInput";
+import { SecondaryDiv } from "../components/atoms/div/SecondaryDiv";
+import { ShortInput } from "../components/atoms/input/ShortInput";
 import { SearchInput } from "../components/molecules/SearchInput";
 
 export const AtomicDesign = () => {
   return (
     <>
-      <PrimaryDiv>
-        <PrimaryInput></PrimaryInput>
+      <SecondaryDiv display="flex">
+        <h1>atoms</h1>
+        <ShortInput></ShortInput>
         <br />
         <PrimaryButton>テスト</PrimaryButton>
         <br />
         <SecondaryButton>テスト</SecondaryButton>
-      </PrimaryDiv>
+      </SecondaryDiv>
       <PrimaryDiv>
         <SearchInput placeholder="検索条件を入力してください" />
       </PrimaryDiv>
