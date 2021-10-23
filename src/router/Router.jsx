@@ -2,6 +2,9 @@ import { Switch, Route } from "react-router-dom";
 import { AtomicDesign } from "../components/pages/atomicDesign/AtomicDesign";
 import { Home } from "../components/pages/Home";
 import { Page404 } from "../components/pages/Page404";
+import { DefaultLayout } from "../components/templates/DefaultLayout";
+import { FooterOnly } from "../components/templates/FooterOnly";
+import { HeaderOnly } from "../components/templates/HeaderOnly";
 import { page1Routes } from "./Page1Routes";
 import { page2Routes } from "./Page2Routes";
 
@@ -10,7 +13,9 @@ export const Router = (props) => {
   return (
     <Switch>
       <Route exact path="/">
-        <Home />
+        <DefaultLayout>
+          <Home />
+        </DefaultLayout>
       </Route>
       <Route
         path="/page1"
@@ -45,10 +50,16 @@ export const Router = (props) => {
         )}
       />
       <Route path="/atomicDesign">
-        <AtomicDesign />
+        <HeaderOnly>
+          <AtomicDesign />
+        </HeaderOnly>
       </Route>
       <Route path="*">
-        <Page404 />
+        <FooterOnly>
+          <div className="App">
+            <Page404 />
+          </div>
+        </FooterOnly>
       </Route>
     </Switch>
   );
