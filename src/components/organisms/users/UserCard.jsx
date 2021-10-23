@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Card } from "../../atoms/card/Card";
+import { UserIconWithName } from "../../molecules/user/UserIconWithName";
 
 export const UserCard = (props) => {
   const { user } = props;
@@ -8,8 +9,7 @@ export const UserCard = (props) => {
     <Card>
       {user !== undefined ? (
         <>
-          <img height={160} width={160} src={user.image} alt="profile" />
-          <p>{user.name}</p>
+          <UserIconWithName image={user.image} name={user.name} />
           <SDl>
             <dt>mail</dt>
             <dd>{user.email}</dd>
@@ -21,13 +21,7 @@ export const UserCard = (props) => {
         </>
       ) : (
         <>
-          <img
-            height={160}
-            width={160}
-            src="https://source.unsplash.com/-KLKu_pruJ4"
-            alt="profile"
-          />
-          <p>name</p>
+          <UserIconWithName />
           <SDl>
             <dt>mail</dt>
             <dd>example@mail.com</dd>
@@ -51,5 +45,6 @@ const SDl = styled.dl`
   dd {
     padding-left: 64px;
     padding-bottom: 8px;
+    overflow-wrap: break-word;
   }
 `;
