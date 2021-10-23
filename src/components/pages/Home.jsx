@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { ChildArea } from "../organisms/ChildArea";
+import { ChildArea } from "../atoms/div/ChildArea";
 import { CssModules } from "../CssModules";
 import { Emotion } from "../Emotion";
 import { InlineStyle } from "../InlineStyle";

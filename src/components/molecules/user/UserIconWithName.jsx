@@ -5,12 +5,12 @@ export const UserIconWithName = (props) => {
   return (
     <>
       {image !== undefined ? (
-        <>
+        <div className="App">
           <SImg height={160} width={160} src={image} alt="profile" />
           <SName>{name}</SName>
-        </>
+        </div>
       ) : (
-        <>
+        <div className="App">
           <SImg
             height={160}
             width={160}
@@ -18,7 +18,7 @@ export const UserIconWithName = (props) => {
             alt="profile"
           />
           <SName>name</SName>
-        </>
+        </div>
       )}
     </>
   );
