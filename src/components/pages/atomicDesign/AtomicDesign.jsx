@@ -1,10 +1,10 @@
-import { PrimaryButton } from "../components/atoms/button/PrimaryButton";
-import { SecondaryButton } from "../components/atoms/button/SecondaryButton";
-import { PrimaryDiv } from "../components/atoms/div/PrimaryDiv";
-import { SecondaryDiv } from "../components/atoms/div/SecondaryDiv";
-import { ShortInput } from "../components/atoms/input/ShortInput";
-import { SearchInput } from "../components/molecules/SearchInput";
-import { UserCard } from "../components/organisms/users/UserCard";
+import { PrimaryButton } from "../../atoms/button/PrimaryButton";
+import { SecondaryButton } from "../../atoms/button/SecondaryButton";
+import { PrimaryDiv } from "../../atoms/div/PrimaryDiv";
+import { SecondaryDiv } from "../../atoms/div/SecondaryDiv";
+import { ShortInput } from "../../atoms/input/ShortInput";
+import { SearchInput } from "../../molecules/SearchInput";
+import { UserCard } from "../../organisms/users/UserCard";
 
 const user = {
   name: "とうふめんたるちきんはーと",

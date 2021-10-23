@@ -1,11 +1,11 @@
 import { useCallback, useState } from "react";
-import { ChildArea } from "./ChildArea";
-import { CssModules } from "./components/CssModules";
-import { Emotion } from "./components/Emotion";
-import { InlineStyle } from "./components/InlineStyle";
-import { StyledComponents } from "./components/StyledComponents";
-import { StyledJsx } from "./components/StyledJsx";
-import { ViewButton } from "./ViewButton";
+import { ChildArea } from "../organisms/ChildArea";
+import { CssModules } from "../CssModules";
+import { Emotion } from "../Emotion";
+import { InlineStyle } from "../InlineStyle";
+import { StyledComponents } from "../StyledComponents";
+import { StyledJsx } from "../StyledJsx";
+import { ViewButton } from "../atoms/button/ViewButton";
 
 export const Home = () => {
   const [count, setCount] = useState(0);

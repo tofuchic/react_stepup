@@ -1,6 +1,6 @@
-import { Page1 } from "../page1/Page1";
-import { Page1DetailA } from "../page1/Page1DetailA";
-import { Page1DetailB } from "../page1/Page1DetailB";
+import { Page1 } from "../components/pages/page1/Page1";
+import { Page1DetailA } from "../components/pages/page1/Page1DetailA";
+import { Page1DetailB } from "../components/pages/page1/Page1DetailB";
 
 export const page1Routes = [
   {

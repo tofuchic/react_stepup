@@ -1,5 +1,5 @@
-import { Page2 } from "../page2/Page2";
-import { UrlParameter } from "../page2/UrlParameter";
+import { Page2 } from "../components/pages/page2/Page2";
+import { UrlParameter } from "../components/pages/page2/UrlParameter";
 
 export const page2Routes = (count) => [
   {

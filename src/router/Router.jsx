@@ -1,7 +1,7 @@
 import { Switch, Route } from "react-router-dom";
-import { AtomicDesign } from "../atomicDesign/AtomicDesign";
-import { Home } from "../Home";
-import { Page404 } from "../Page404";
+import { AtomicDesign } from "../components/pages/atomicDesign/AtomicDesign";
+import { Home } from "../components/pages/Home";
+import { Page404 } from "../components/pages/Page404";
 import { page1Routes } from "./Page1Routes";
 import { page2Routes } from "./Page2Routes";
 
